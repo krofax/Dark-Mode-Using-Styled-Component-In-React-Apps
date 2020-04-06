@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { useDarkMode } from './components/useDarkMode';
-import { lightTheme, darkTheme } from "./components/theme"
+import { lightTheme, darkTheme } from "./components/Themes"
 import "./App.css";
 import dummyData from "./data";
 import CardList from "./components/CardList";
