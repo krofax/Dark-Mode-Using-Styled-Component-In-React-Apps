@@ -3,10 +3,10 @@ import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { useDarkMode } from './components/useDarkMode';
 import { lightTheme, darkTheme } from "./components/Themes"
+import Toggle from "./components/Toggle";
 import "./App.css";
 import dummyData from "./data";
 import CardList from "./components/CardList";
-import Toggle from "./components/Toggle";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
