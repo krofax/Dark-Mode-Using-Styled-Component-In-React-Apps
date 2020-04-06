@@ -8,11 +8,7 @@ export const useDarkMode = () => {
     };
 
     const toggleTheme = () => {
-        if (theme === 'light') {
-            setMode('dark');
-        } else {
-            setMode('light');
-        }
+        theme === 'light' ? setMode('dark') : setMode('light')
     };
 
     useEffect(() => {
