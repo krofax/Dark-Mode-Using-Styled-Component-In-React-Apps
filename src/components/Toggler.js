@@ -5,28 +5,19 @@ import styled from "styled-components"
 const Button = styled.button`
   background: ${({ theme }) => theme.background};
   border: 2px solid ${({ theme }) => theme.toggleBorder};
+  color: ${({ theme }) => theme.text};
   border-radius: 30px;
   cursor: pointer;
-  font-size: 0.5rem;
-  color: #fff;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0.1rem;
-  position: relative;
-  width: 4rem;
-  height: 2rem;
+  font-size:0.8rem;
+  padding: 0.6rem;
   }
 
-  h3{
-    padding: 3px;
-    margin: 5px
-  }
 `;
 
-const Toggle = ({ toggleTheme }) => {
+const Toggle = ({theme,  toggleTheme }) => {
     return (
         <Button onClick={toggleTheme} >
-          <h3>Toggle</h3>
+          Switch Theme
         </Button>
     );
 };
