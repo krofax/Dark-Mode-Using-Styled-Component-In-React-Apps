@@ -8,11 +8,15 @@ import "./App.css";
 import dummyData from "./data";
 import CardList from "./components/CardList";
 
-const App = () => {
+const App= () => {
+
+  
   const [videos, setVideos] = useState([]);
-  const [theme, themeToggler] = useDarkMode();
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
 
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,6 +24,8 @@ const App = () => {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  if(!mountedComponent) return <div/>
 
   return (
     <ThemeProvider theme={themeMode}>
